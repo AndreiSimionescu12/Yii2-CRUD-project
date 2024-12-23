@@ -30,14 +30,14 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= GridView::widget([
                 'dataProvider' => $dataProvider,
                 'filterModel' => $searchModel,
-                'tableOptions' => ['class' => 'table table-sm table-striped table-bordered table-hover'], // Adăugăm clasa `table-sm`
+                'tableOptions' => ['class' => 'table table-sm table-striped table-bordered table-hover'],
                 'columns' => [
                     [
                         'class' => ActionColumn::className(),
-                        'header' => 'Acțiuni', // Titlul coloanei
-                        'template' => '{view} {update} {delete}', // Template pentru butoane
-                        'headerOptions' => ['class' => 'custom-header text-center'], // Stilizare header
-                        'contentOptions' => ['class' => 'text-center'], // Stilizare conținut
+                        'header' => 'Acțiuni',
+                        'template' => '{view} {update} {delete}',
+                        'headerOptions' => ['class' => 'custom-header text-center'],
+                        'contentOptions' => ['class' => 'text-center'],
                         'buttons' => [
                             'view' => function ($url) {
                                 return Html::a('<i class="fas fa-eye"></i>', $url, ['class' => 'btn btn-sm btn-primary']);

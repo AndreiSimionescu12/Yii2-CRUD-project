@@ -6,18 +6,17 @@ use yii\helpers\Html;
 /** @var app\models\Student $model */
 
 $this->title = $model->last_name . ' ' . $model->first_name;
-$this->params['breadcrumbs'][] = ['label' => 'Students', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Studenți', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="student-view">
-
     <div class="card shadow-sm">
         <div class="card-header bg-dark text-white">
-            <h5 class="mb-0">Detalii Student: <?= Html::encode($this->title) ?></h5>
+            <h6 class="mb-0">Detalii Student: <?= Html::encode($this->title) ?></h6>
         </div>
         <div class="card-body">
-            <table class="table table-bordered">
+            <table class="table table-sm table-bordered">
                 <thead>
                 <tr>
                     <th>Nume</th>
@@ -41,11 +40,11 @@ $this->params['breadcrumbs'][] = $this->title;
             </table>
         </div>
         <div class="card-footer d-flex justify-content-between">
-            <?= Html::a('Înapoi', ['index'], ['class' => 'btn btn-secondary']) ?>
+            <?= Html::a('Înapoi', ['index'], ['class' => 'btn btn-secondary btn-sm']) ?>
             <div>
-                <?= Html::a('Modifică', ['update', 'id' => $model->id], ['class' => 'btn btn-primary me-2']) ?>
+                <?= Html::a('Modifică', ['update', 'id' => $model->id], ['class' => 'btn btn-primary btn-sm me-2']) ?>
                 <?= Html::a('Șterge', ['delete', 'id' => $model->id], [
-                    'class' => 'btn btn-danger',
+                    'class' => 'btn btn-danger btn-sm',
                     'data' => [
                         'confirm' => 'Ești sigur că vrei să ștergi acest student?',
                         'method' => 'post',
