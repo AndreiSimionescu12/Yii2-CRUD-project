@@ -78,7 +78,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </header>
 
     <main id="main" class="flex-shrink-0" role="main">
-        <div class="container-fluid">
+        <div class="">
             <?php if (!empty($this->params['breadcrumbs'])): ?>
                 <div class="bg-light shadow rounded p-3 mb-2">
                     <?= Breadcrumbs::widget([
@@ -97,11 +97,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </div>
     </main>
 
+
     <footer id="footer" class="mt-auto py-3 bg-black">
         <div class="container">
             <div class="row text-muted">
                 <div class="col-md-6 text-center text-md-start text-white">&copy; Andrei Simionescu <?= date('Y') ?></div>
-                <div class="col-md-6 text-center text-md-end"><?= Yii::powered() ?></div>
             </div>
         </div>
     </footer>

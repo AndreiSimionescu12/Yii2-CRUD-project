@@ -9,9 +9,9 @@ $this->title = 'Adaugă student';
 $this->params['breadcrumbs'][] = ['label' => 'Studenți', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="student-create pt-2">
+<div class="student-create p-2">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h5 class="page-title text-muted mb-2"><?= Html::encode($this->title) ?></h5>
 
     <?= $this->render('_form', [
         'model' => $model,

@@ -13,12 +13,12 @@ use yii\grid\GridView;
 $this->title = 'Studenți';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="student-index">
+<div class="student-index p-2">
 
     <div class="d-flex justify-content-start align-items-center mb-4">
-        <h1 class="mb-0 me-3"><?= Html::encode($this->title) ?></h1>
+        <h5 class="mb-0 me-3"><?= Html::encode($this->title) ?></h5>
         <p class="mb-0">
-            <?= Html::a('Adaugă student', ['create'], ['class' => 'btn btn-success']) ?>
+            <?= Html::a('Adaugă student', ['create'], ['class' => 'btn btn-success btn-sm']) ?>
         </p>
     </div>
 
@@ -30,14 +30,14 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= GridView::widget([
                 'dataProvider' => $dataProvider,
                 'filterModel' => $searchModel,
-                'tableOptions' => ['class' => 'table table-striped table-bordered table-hover'],
+                'tableOptions' => ['class' => 'table table-sm table-striped table-bordered table-hover'],
                 'columns' => [
                     [
                         'class' => ActionColumn::className(),
-                        'header' => 'Acțiuni', // Titlul coloanei
-                        'template' => '{view} {update} {delete}', // Template pentru butoane
-                        'headerOptions' => ['class' => 'custom-header text-center'], // Stilizare header
-                        'contentOptions' => ['class' => 'text-center'], // Stilizare conținut
+                        'header' => 'Acțiuni',
+                        'template' => '{view} {update} {delete}',
+                        'headerOptions' => ['class' => 'custom-header text-center'],
+                        'contentOptions' => ['class' => 'text-center'],
                         'buttons' => [
                             'view' => function ($url) {
                                 return Html::a('<i class="fas fa-eye"></i>', $url, ['class' => 'btn btn-sm btn-primary']);
