@@ -9,7 +9,7 @@ $this->title = 'Modifică student: ' . Html::encode($model->last_name . ' ' . $m
 $this->params['breadcrumbs'][] = ['label' => 'Studenți', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="student-update pt-2">
+<div class="student-update p-2">
 
     <h5 class="page-title text-muted mb-2"><?= Html::encode($this->title) ?></h5>
 

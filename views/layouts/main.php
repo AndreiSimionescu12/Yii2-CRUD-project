@@ -78,7 +78,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </header>
 
     <main id="main" class="flex-shrink-0" role="main">
-        <div class="container-fluid">
+        <div class="">
             <?php if (!empty($this->params['breadcrumbs'])): ?>
                 <div class="bg-light shadow rounded p-3 mb-2">
                     <?= Breadcrumbs::widget([

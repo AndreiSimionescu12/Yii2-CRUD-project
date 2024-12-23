@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Studenți', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="student-view">
+<div class="student-view p-2">
     <div class="card shadow-sm">
         <div class="card-header bg-dark text-white">
             <h6 class="mb-0">Detalii Student: <?= Html::encode($this->title) ?></h6>
