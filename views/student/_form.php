@@ -41,11 +41,10 @@ use yii\widgets\ActiveForm;
                 <?= $form->field($model, 'year')->textInput(['class' => 'form-control form-control-sm']) ?>
             </div>
         </div>
-
-        <?php ActiveForm::end(); ?>
     </div>
     <div class="card-footer d-flex justify-content-between">
         <?= Html::a('Înapoi', ['index'], ['class' => 'btn btn-secondary btn-sm']) ?>
         <?= Html::submitButton('Salvează', ['class' => 'btn btn-success btn-sm']) ?>
     </div>
 </div>
+<?php ActiveForm::end(); ?>

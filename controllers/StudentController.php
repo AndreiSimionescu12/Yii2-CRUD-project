@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Student;
 use app\models\StudentSearch;
+use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -71,7 +72,11 @@ class StudentController extends Controller
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+                Yii::$app->session->setFlash('success', 'Studentul a fost adăugat cu succes!');
+
+                return $this->redirect(['index']);
+            } else {
+                Yii::$app->session->setFlash('error', 'A apărut o eroare. Vă rugăm să încercați din nou.');
             }
         } else {
             $model->loadDefaultValues();
@@ -81,6 +86,7 @@ class StudentController extends Controller
             'model' => $model,
         ]);
     }
+
 
     /**
      * Updates an existing Student model.
@@ -93,8 +99,14 @@ class StudentController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($this->request->isPost) {
+            if ($model->load($this->request->post()) && $model->save()) {
+                Yii::$app->session->setFlash('success', 'Studentul a fost actualizat cu succes!');
+
+                return $this->redirect(['index']);
+            } else {
+                Yii::$app->session->setFlash('error', 'A apărut o eroare la actualizarea datelor. Vă rugăm să încercați din nou.');
+            }
         }
 
         return $this->render('update', [
